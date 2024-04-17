@@ -74,16 +74,16 @@ def generate_image_from_prompt(prompt):
 
     return img_buffer
 
-@app.route('/', methods=['GET', 'POST'])
+'''@app.route('/', methods=['GET', 'POST'])
 def index():
     if request.method == 'POST':
         user_input = request.form.get('user_input')
         generated_image = generate_image_from_prompt(user_input) 
         return generated_image
-    return render_template('./index.html')
+    return render_template('./index.html')'''
 
 
-'''@app.route('/api', methods=['GET', 'POST'])
+@app.route('/api', methods=['GET', 'POST'])
 def api():
     if request.method=='POST':
         data=request.get_json()
@@ -102,7 +102,7 @@ def api():
 
             return jsonify({'image_base64': base64_image})
         else:
-            return jsonify({'error':'Prompt Is not Provide in the Request'})'''
+            return jsonify({'error':'Prompt Is not Provide in the Request'})
 
 if __name__ == '__main__':
     app.run(debug=True)
