@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text to Image Generator</title>
+</head>
+<body>
+    <h1>Text to Image Generator</h1>
+    <form method="post">
+        <input type="text" name="user_input" placeholder="Enter your prompt">
+        <button type="submit">Generate Image</button>
+    </form>
+    {% if image %}
+        <img src="{{ url_for('index') }}" alt="Generated Image">
+    {% endif %}
+</body>
+</html>
+
