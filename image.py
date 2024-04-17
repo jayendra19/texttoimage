@@ -105,7 +105,7 @@ def api():
             return jsonify({'error':'Prompt Is not Provide in the Request'})
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True,port=8000)
 
 
 
